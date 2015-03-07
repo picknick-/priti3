@@ -1,0 +1,3 @@
+#!/bin/zsh
+find config.d -name '*.cfg' -exec cat {} \;  >> config
+i3-msg reload

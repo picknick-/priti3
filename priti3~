@@ -1,0 +1,2 @@
+#!/bin/zsh
+find config.d -name '*.cfg' -exec cat {} \;  
