@@ -1,7 +1,5 @@
-#!/bin/zsh
-TIME=`date +"%F %T"`
-cd ~/.i3
-mv config backup/$TIME
-cat header.cfg > config
-find config.d -name '*.cfg' -exec cat {} \;   >> config
+#!/bin/bash
+TIME=`date +"%F|%T"`
+mv ~/.config/i3/config ~/.config/i3/backup/$TIME
+cat ~/.config/i3/header.cfg ~/.config/i3/config.d/*.cfg > ~/.config/i3/config
 i3-msg reload
